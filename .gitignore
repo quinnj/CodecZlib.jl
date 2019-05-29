@@ -3,7 +3,6 @@
 *.jl.mem
 /Manifest.toml
 /.envrc
-/deps/deps.jl
 /deps/build.log
 /deps/lib
 /deps/src
