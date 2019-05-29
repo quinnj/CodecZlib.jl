@@ -9,7 +9,7 @@ if isdefined((@static VERSION < v"0.7.0-DEV.484" ? current_module() : @__MODULE_
 elseif VERSION >= v"0.7.0-DEV.3382"
     import Libdl
 end
-const libz = "/usr/lib/libz.so"
+const libz = Sys.isapple() ? "/usr/lib/libz.dylib" : "/usr/lib/libz.so"
 function check_deps()
     global libz
     if !isfile(libz)
